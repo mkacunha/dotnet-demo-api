@@ -1,0 +1,17 @@
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.api\bin\Debug\netcoreapp2.1\pessoa.api.deps.json
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.api\bin\Debug\netcoreapp2.1\pessoa.api.runtimeconfig.json
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.api\bin\Debug\netcoreapp2.1\pessoa.api.runtimeconfig.dev.json
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.api\bin\Debug\netcoreapp2.1\pessoa.api.dll
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.api\bin\Debug\netcoreapp2.1\pessoa.api.pdb
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.api\obj\Debug\netcoreapp2.1\pessoa.api.csprojAssemblyReference.cache
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.api\obj\Debug\netcoreapp2.1\pessoa.api.csproj.CoreCompileInputs.cache
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.api\obj\Debug\netcoreapp2.1\pessoa.api.RazorAssemblyInfo.cache
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.api\obj\Debug\netcoreapp2.1\pessoa.api.RazorAssemblyInfo.cs
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.api\obj\Debug\netcoreapp2.1\pessoa.api.AssemblyInfoInputs.cache
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.api\obj\Debug\netcoreapp2.1\pessoa.api.AssemblyInfo.cs
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.api\obj\Debug\netcoreapp2.1\pessoa.api.RazorTargetAssemblyInfo.cache
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.api\obj\Debug\netcoreapp2.1\pessoa.api.dll
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.api\obj\Debug\netcoreapp2.1\pessoa.api.pdb
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.api\bin\Debug\netcoreapp2.1\pessoa.domain.dll
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.api\bin\Debug\netcoreapp2.1\pessoa.domain.pdb
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.api\obj\Debug\netcoreapp2.1\pessoa.api.csproj.CopyComplete

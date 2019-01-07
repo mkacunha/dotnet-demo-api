@@ -1,0 +1,9 @@
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.domain\bin\Debug\netcoreapp2.1\pessoa.domain.deps.json
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.domain\bin\Debug\netcoreapp2.1\pessoa.domain.dll
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.domain\bin\Debug\netcoreapp2.1\pessoa.domain.pdb
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.domain\obj\Debug\netcoreapp2.1\pessoa.domain.csprojAssemblyReference.cache
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.domain\obj\Debug\netcoreapp2.1\pessoa.domain.csproj.CoreCompileInputs.cache
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.domain\obj\Debug\netcoreapp2.1\pessoa.domain.AssemblyInfoInputs.cache
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.domain\obj\Debug\netcoreapp2.1\pessoa.domain.AssemblyInfo.cs
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.domain\obj\Debug\netcoreapp2.1\pessoa.domain.dll
+C:\Users\maiko.cunha\Documents\projetos\mentoria\pessoa.api\pessoa.domain\obj\Debug\netcoreapp2.1\pessoa.domain.pdb
