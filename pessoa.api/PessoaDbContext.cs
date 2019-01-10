@@ -26,7 +26,7 @@ namespace pessoa.api
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseMySql("Server=192.168.99.100;User Id=pessoa;Password=1234;Database=pessoa-db");
+                optionsBuilder.UseMySql("Server=localhost;User Id=pessoa;Password=1234;Database=pessoa-db");
             }
         }
 
