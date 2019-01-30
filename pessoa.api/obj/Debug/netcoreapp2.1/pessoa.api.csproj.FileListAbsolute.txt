@@ -32,3 +32,9 @@ C:/Users/maiko.cunha/Documents/projetos/mentoria/pessoa.api/pessoa.api/obj/Debug
 /home/maiko/Documents/projetos/dotnet/dotnet-demo-api/pessoa.api/obj/Debug/netcoreapp2.1/pessoa.api.csproj.CopyComplete
 /home/maiko/Documents/projetos/dotnet/dotnet-demo-api/pessoa.api/obj/Debug/netcoreapp2.1/pessoa.api.dll
 /home/maiko/Documents/projetos/dotnet/dotnet-demo-api/pessoa.api/obj/Debug/netcoreapp2.1/pessoa.api.pdb
+/home/maiko/Documents/projetos/dotnet/dotnet-demo-api/pessoa.api/bin/Debug/netcoreapp2.1/pessoa.dto.dll
+/home/maiko/Documents/projetos/dotnet/dotnet-demo-api/pessoa.api/bin/Debug/netcoreapp2.1/pessoa.persistence.dll
+/home/maiko/Documents/projetos/dotnet/dotnet-demo-api/pessoa.api/bin/Debug/netcoreapp2.1/pessoa.service.dll
+/home/maiko/Documents/projetos/dotnet/dotnet-demo-api/pessoa.api/bin/Debug/netcoreapp2.1/pessoa.service.pdb
+/home/maiko/Documents/projetos/dotnet/dotnet-demo-api/pessoa.api/bin/Debug/netcoreapp2.1/pessoa.dto.pdb
+/home/maiko/Documents/projetos/dotnet/dotnet-demo-api/pessoa.api/bin/Debug/netcoreapp2.1/pessoa.persistence.pdb

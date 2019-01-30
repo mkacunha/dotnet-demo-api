@@ -13,5 +13,17 @@ namespace pessoa.domain.pessoa
 
         public ICollection<Endereco> Enderecos { get; set; }
         public ICollection<Telefone> Telefones { get; set; }
+
+        public Pessoa()
+        {
+        }
+
+        public Pessoa(int Id, string Nome, ICollection<Endereco> Enderecos, ICollection<Telefone> Telefones)
+        {
+            this.Id = Id;
+            this.Nome = Nome;
+            this.Enderecos = Enderecos;
+            this.Telefones = Telefones;
+        }
     }
 }

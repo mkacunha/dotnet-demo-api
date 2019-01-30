@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace pessoa.api.Dto
+namespace pessoa.dto
 {
     public class EnderecoDto
     {

@@ -4,11 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using pessoa.api.Dto;
 using pessoa.domain.endereco;
 using pessoa.domain.pessoa;
 using pessoa.domain.telefone;
 using AutoMapper;
+using pessoa.service.pessoa;
+using pessoa.dto;
 
 namespace pessoa.api.Controllers
 {
@@ -16,96 +17,78 @@ namespace pessoa.api.Controllers
     [ApiController]
     public class PessoasController : ControllerBase
     {
-        readonly PessoaDbContext _dbContext;
-        readonly IMapper _mapper;
-
-        public PessoasController(IMapper mapper)
+        PessoaService _pessoaService;
+        public PessoasController()
         {
-            _dbContext = new PessoaDbContext();
-            _mapper = mapper;
+            _pessoaService = new PessoaService();
         }
 
         [HttpPost]
         public ActionResult<PessoaDto> Post(PessoaDto pessoaDto)
-        {           
-            var pessoaEntity =_mapper.Map<Pessoa>(pessoaDto);
-            _dbContext.Pessoas.Add(pessoaEntity);
-            _dbContext.SaveChanges();
-            string uri = Url.Action("Post", new { id = pessoaEntity.Id });
-            return Created(uri, _mapper.Map<PessoaDto>(pessoaEntity));
+        {
+            var pessoaSaved = _pessoaService.Save(pessoaDto);
+            string uri = Url.Action("Post", new { id = pessoaSaved.Id });
+            return Created(uri, pessoaSaved);
         }
 
         [HttpGet]
-        public ActionResult<IList<Pessoa>> GetAll()
+        public ActionResult<IList<PessoaDto>> GetAll()
         {
-            return Ok(_dbContext.Pessoas.ToList());
+            return Ok(_pessoaService.findAll());
         }
 
         [HttpGet]
         [Route("sem-endereco")]
-        public ActionResult GetPessoasSemEndereco() {
-            var pessoas = _dbContext.Pessoas.Where(p => p.Enderecos.Count() == 0);
-
-            return Ok(pessoas);
+        public ActionResult GetPessoasSemEndereco()
+        {
+            return Ok(_pessoaService.findAll());
         }
 
         [HttpGet]
         [Route("sem-telefone")]
-        public ActionResult GetPessoasSemTelefone() {
-            var pessoas = _dbContext.Pessoas.Where(p => p.Telefones.Count() == 0);
-            return Ok(pessoas);
+        public ActionResult GetPessoasSemTelefone()
+        {
+            return Ok(_pessoaService.findByPredicate(p => p.Telefones.Count() == 0));
         }
 
         [HttpGet]
         [Route("completa")]
-        public ActionResult GetPessoasComEnderecosETelefones() {
-            var pessoas = from pessoa in _dbContext.Pessoas 
-                join endereco in _dbContext.Enderecos on pessoa equals endereco.Pessoa
-                join telefone in _dbContext.Telefones on pessoa equals telefone.Pessoa
-                select new { pessoa.Nome, pessoa.Enderecos, pessoa.Telefones }; 
-            return Ok(pessoas);
+        public ActionResult GetPessoasComEnderecosETelefones()
+        {
+            return Ok(_pessoaService.findAllWithEnderecoAndTelefone());
         }
 
         [HttpGet("{id}")]
-        public ActionResult<IList<Pessoa>> GetOne(int id)
+        public ActionResult<IList<Pessoa>> GetOne(int Id)
         {
-            return Ok(_dbContext.Pessoas.Where(pessoa => pessoa.Id == id));
+            return Ok(_pessoaService.findByPredicate(pessoa => pessoa.Id == Id));
         }
 
-        [HttpPut("{id}")]
-        public ActionResult<Pessoa> Put(int id, [FromBody] Pessoa people)
+        [HttpPut("{Id}")]
+        public ActionResult<Pessoa> Put(int Id, [FromBody] Pessoa Pessoa)
         {
-            IQueryable<Pessoa> result = _dbContext.Pessoas.Where(p => p.Id == id);
+            var pessoaUpdated = _pessoaService.Update(Id, Pessoa);
 
-            if (result.Count() > 0)
+            if (pessoaUpdated != null)
             {
-                Pessoa pessoaFromDatabase = result.First();
-                pessoaFromDatabase.Nome = people.Nome;
-                _dbContext.Update(pessoaFromDatabase);
-                _dbContext.SaveChanges();
-                return Ok(pessoaFromDatabase);
+                return Ok(pessoaUpdated);
             }
 
-            return BadRequest("Pessoa de ID " + id + " não existe no banco de dados");
+            return BadRequest("Pessoa de ID " + Id + " não existe no banco de dados");
         }
 
-        [HttpDelete("{id}")]
-        public ActionResult Delete(int id)
+        [HttpDelete("{Id}")]
+        public ActionResult Delete(int Id)
         {
-            IQueryable<Pessoa> result = _dbContext.Pessoas.Where(p => p.Id == id);
-
-            if (result.Count() > 0)
+            if (_pessoaService.Delete(Id))
             {
-                _dbContext.Remove(result.First());
-                _dbContext.SaveChanges();
                 return Ok();
             }
-
-            return BadRequest("Pessoa de ID " + id + " não existe no banco de dados");
+            return BadRequest("Pessoa de ID " + Id + " não existe no banco de dados");
         }
 
 
-        
+
 
     }
 }

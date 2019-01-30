@@ -24,15 +24,13 @@
     ".NETCoreApp,Version=v2.1": {
       "pessoa.api/1.0.0": {
         "dependencies": {
-          "AutoMapper": "8.0.0",
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "6.0.0",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
-          "Microsoft.EntityFrameworkCore.Design": "2.1.4",
           "Microsoft.NETCore.App": "2.1.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.1",
-          "Pomelo.EntityFrameworkCore.MySql": "2.1.4",
-          "pessoa.domain": "1.0.0"
+          "pessoa.domain": "1.0.0",
+          "pessoa.dto": "1.0.0",
+          "pessoa.service": "1.0.0"
         },
         "runtime": {
           "pessoa.api.dll": {}
@@ -722,6 +720,42 @@
         },
         "compile": {
           "pessoa.domain.dll": {}
+        }
+      },
+      "pessoa.dto/1.0.0": {
+        "runtime": {
+          "pessoa.dto.dll": {}
+        },
+        "compile": {
+          "pessoa.dto.dll": {}
+        }
+      },
+      "pessoa.persistence/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "2.1.4",
+          "Pomelo.EntityFrameworkCore.MySql": "2.1.4",
+          "pessoa.domain": "1.0.0"
+        },
+        "runtime": {
+          "pessoa.persistence.dll": {}
+        },
+        "compile": {
+          "pessoa.persistence.dll": {}
+        }
+      },
+      "pessoa.service/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "8.0.0",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "6.0.0",
+          "pessoa.domain": "1.0.0",
+          "pessoa.dto": "1.0.0",
+          "pessoa.persistence": "1.0.0"
+        },
+        "runtime": {
+          "pessoa.service.dll": {}
+        },
+        "compile": {
+          "pessoa.service.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3867,6 +3901,21 @@
       "hashPath": "system.linq.queryable.4.0.1.nupkg.sha512"
     },
     "pessoa.domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "pessoa.dto/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "pessoa.persistence/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "pessoa.service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

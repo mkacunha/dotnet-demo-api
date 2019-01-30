@@ -5,8 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\pessoa.api\pessoa.api.csproj" />
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.0.0" />
     <ProjectReference Include="..\pessoa.domain\pessoa.domain.csproj" />
+    <ProjectReference Include="..\pessoa.persistence\pessoa.persistence.csproj" />
+    <ProjectReference Include="..\pessoa.dto\pessoa.dto.csproj" />
   </ItemGroup>
 
 </Project>
